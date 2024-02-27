@@ -31,3 +31,11 @@ class SystemStatus(SingletonModel):
     doorLocked = models.BooleanField(default=False)
     securityArmed = models.BooleanField(default=False)
     securityBreached = models.BooleanField(default=False)
+    temperature = models.IntegerField(
+        validators=[MinValueValidator(-100), MaxValueValidator(100)],
+        default=0
+    )
+    humidity = models.IntegerField(
+        validators=[MinValueValidator(0), MaxValueValidator(100)],
+        default=0
+    )
