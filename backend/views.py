@@ -10,8 +10,8 @@ import json
 
 systemSecureState = {
     "windowOpen": False,
-    "fan": 0,
-    "lights": 0,
+    "fanOn": False,
+    "lightsOn": False,
     "blinds": 0,
     "doorLocked": True,
     "securityArmed": True
