@@ -4,4 +4,4 @@ from .models import *
 class SystemStatusSerializer(serializers.ModelSerializer):
     class Meta:
         model = SystemStatus
-        fields = ['id', 'windowOpen', 'fan', 'lights', 'blinds', 'doorLocked', 'securityArmed', 'securityBreached', 'temperature', 'humidity']
+        fields = ['id', 'windowOpen', 'fanOn', 'lightsOn', 'blinds', 'doorLocked', 'securityArmed', 'securityBreached', 'temperature', 'humidity']

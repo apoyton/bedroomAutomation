@@ -15,22 +15,18 @@ class SingletonModel(models.Model):
 
 
 class SystemStatus(SingletonModel):
-    fan = models.IntegerField(
-        validators=[MinValueValidator(0), MaxValueValidator(100)],
-        default=0
-    )
-    lights = models.IntegerField(
-        validators=[MinValueValidator(0), MaxValueValidator(100)],
-        default=0
-    )
     blinds = models.IntegerField(
         validators=[MinValueValidator(0), MaxValueValidator(100)],
         default=0
     )
+
+    fanOn = models.BooleanField(default=False)
+    lightsOn = models.BooleanField(default=False)
     windowOpen = models.BooleanField(default=False)
     doorLocked = models.BooleanField(default=False)
     securityArmed = models.BooleanField(default=False)
     securityBreached = models.BooleanField(default=False)
+    
     temperature = models.IntegerField(
         validators=[MinValueValidator(-100), MaxValueValidator(100)],
         default=0
